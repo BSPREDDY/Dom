@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            let a = document.getElementById('firstinput').value;
+            let b = document.getElementById('secondinput').value;
+          //let res = fetch("https://sum-server.100xdevs.com/sum?a="+ first +"&b=" + second) //-->this call is an ideally an asynchronus call 
+            //console.log(res)//---> here res actually log a promise,because it's takes time call to go out to a server in a mumbai,if i look at the logs it says promise pending and what we we do when ever we dealing with promises we add a .then() at the end, when the promise resolves when we get back the data is when we need to do some thing with the final data  
+          // const element = document.getElementById('finalsum');
+            // element.innerHTML =  parseInt(first) +parseInt(second);
+
+//--> fetch when ever i resolve then controle should reach here(console.log(res)) and i log a response object here
+        //   fetch("https://sum-server.100xdevs.com/sum?a="+ a +"&b=" + b)
+        //   .then(function(res){
+        //       console.log(res)
+        //   })
+        //   .catch(function(error){
+        //     console.log("Fetch error",error);
+        //   })
+
+
+          fetch("https://sum-server.100xdevs.com/sum?a="+ a +"&b=" + b)
+          .then(function(res){
+              console.log(res)
+              res.text()
+              .then(function(ans){
+                console.log(ans)
+              })
+          })
+          .catch(function(error){
+            console.log("Fetch error",error);
+          })
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <input id="firstinput" type="text" name="first" >
+    <input id="secondinput" type="text" name="second" >
+    <button onclick="add()">add</button>
+    <div id="finalsum"></div>
+</body>
+</html>

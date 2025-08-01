@@ -1,0 +1,85 @@
+DOM-->manuplation visualization
+http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+
+DOM Stands for Document object model
+
+defnition:-
+----------
+->The DOM (Document Object Model) API is a programming interface for web documents. 
+->It represents the page so that programs can change the document structure, style, and content. 
+->The DOM represents the document as a tree of objects; each object represents a part of the page
+
+What was Javascript? 
+people wrote js engine on top of the ECMAScript spec.
+It was an implementation of the ECMAScript spec
+
+ECMAScript spec --> this is a specification that really smart written a doc they said var is the thing let , const is a thing function is a thing objects are there arrays are there every array should a .length functions so and so fourth.
+
+very smart people implimentation of the spec for example
+-->google chrome as actually return the v8 engine
+-->which takes some Javascript code converts its into 0's and 1's this of many compilers of the Javascript this is one of many compilers of Javascript 
+
+they return the top of ECMAScript spec 
+this is the people how write the actual compiler
+
+                                                converts
+ex chrome --> code ---------> Js (V8) engine  -------------> 0's and 1's
+
+chrome as its own compiler
+mozilla firefox as its own compiler
+
+What was Javascript? 
+But the Javascript that runs in your browser has some extra functionality
+
+ECMAScript DOC:-
+--------------
+in ECMAScript DOC setTimeOut you will never find out here why because setTimeOut was never part of ECMAScript 
+standard the people how wrote Javascript never thought this will be some thing we needed never thought ECMAScript need to support clocks or TimeOut.
+
+What was Javascript? 
+
+we will give some extra functionality top of Javascript this is the Javascript spec that things you will see return here 
+
+                                    browser Js
+                    -----------------------------------------------------------
+                    |                                                          |
+                    |               setTimeOut                                 |
+                    |               fetch                                      |
+                    |               setInterval                                |
+                    |               document                                   |
+                    |                                  -------------------     |
+                    |                                  | Javascript spec |     |
+                    |                                  -------------------     |
+                    ------------------------------------------------------------   
+
+fetch()-->it was a function to which you if give some inputs this is the end point i have to hit 
+-->fetch is a asynchronas call,this code run's in my mechine where is the currect backend running as you saa i open the terminal the bunch of thing here what did it say ubuntu@some ip some server in mumbai  not in the leave current 
+simple words-->this request needs go out from my meachine over to a meachine in mumbai and then response need to back.
+
+when we went to loupe website we see a things like a setTimeOut this a part of web API spec and this is some thing browser provide you on top of the original Javascript spec and just like browser provide you some browser specific functionality
+all of this setTimeOut, fetch, setInterval, document not part of the Javascript spec it is a small subset this things add on top,browser needs this functionalitys
+
+                                    node Js
+                    -----------------------------------------------------------
+                    |                                                          |
+                    |               setTimeOut                                 |
+                    |               http                                       |
+                    |               functions                                  |
+                    |                                  -------------------     |
+                    |                                  | Javascript spec |     |
+                    |                                  -------------------     |
+                    ------------------------------------------------------------ 
+
+node js provide you backend specific functionality which again not part of the Javascript spec
+
+parseInt()-->it is a global function that converts a string into number
+onInput() ---> with out using button add two numbers    
+getElementsByClassName()-->it takes class names as input 
+
+---------------------------------------------------------------
+
+Now, lets say you don’t have access to the calculation logic on the frontend 
+Lets assume its a hard problem that someone has exposed on a backend server 
+And you need to hit the backend server and get back the value
+
